@@ -19,7 +19,7 @@ export default class HogCard extends Component {
         let formatedName = name.replaceAll(" ","_")
         let pigImages = require(`../hog-imgs/${formatedName.toLowerCase()}.jpg`)
         return(
-            // <div className='ui eight wide column'>
+            <div className='sixteen wide column centered'>
                 <div onClick={()=> this.changeDetails()} className='pigTile'>
                     <div className='Card-img'>
                         <img src={pigImages}/>
@@ -31,7 +31,7 @@ export default class HogCard extends Component {
                         {this.state.details ? <HogDetails hog={this.props.hog} /> : null}
                     </div>
                 </div>
-            // </div>
+            </div>
         )
     }
 
